@@ -5,7 +5,16 @@ module Maintenance
     no_collection
 
     def process
-      Rails.logger.info("この点は通らねえよおお")
+      Rails.logger.info(info_text)
+    end
+
+    private
+
+    def info_text
+      <<~TEXT
+        だからぁー、この点とこの点とこの点が出るわけだぁー。
+        この点は出ねえよぉぉ！
+      TEXT
     end
   end
 end
